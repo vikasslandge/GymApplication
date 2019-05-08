@@ -1,0 +1,46 @@
+﻿  
+@{
+    ViewBag.Title = "AdminHome";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<h2>AdminHome</h2>
+<p style="font-size:large">
+    <ul>
+        <li>
+            @Ajax.ActionLink("Add Scheme", "Scheme", new AjaxOptions {
+    HttpMethod = "Get",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "div"
+})
+        </li>
+
+        <li>
+            @Ajax.ActionLink("Add Plan", "Plan", new AjaxOptions {
+       HttpMethod = "Get",
+       InsertionMode = InsertionMode.Replace,
+       UpdateTargetId = "div"
+    })
+        </li>
+
+        <li>
+            @Ajax.ActionLink("Add User", "AddUser", new AjaxOptions {
+              HttpMethod = "Get",
+              InsertionMode = InsertionMode.Replace,
+              UpdateTargetId = "div"
+           })
+        </li>
+ 
+            <li>
+                @Ajax.ActionLink("User Details", "DeleteUser", new AjaxOptions {
+               HttpMethod = "Get",
+               InsertionMode = InsertionMode.Replace,
+               UpdateTargetId = "div"
+            })
+        </li>
+    </  >
+</p>
+<div id="div"></div>
+<div>
+    @Html.ActionLink("Back to List", "AdminHome")
+</div>

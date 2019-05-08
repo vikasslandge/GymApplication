@@ -1,0 +1,18 @@
+﻿<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+@{
+    ViewBag.Title = "UserHome";
+}
+
+<h2>UserHome</h2>
+
+<p>
+    <ul>
+        <li>@Ajax.ActionLink("Register Member", "Register", new AjaxOptions { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "div" })</li>
+    </ul>
+</p>
+<div id="div"></div>
+<div>
+    Amount :@ViewBag.amount <br />
+   Your plan subscription last date @ViewBag.lastDate
+</div>
